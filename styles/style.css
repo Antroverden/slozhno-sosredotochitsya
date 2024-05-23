@@ -3,6 +3,8 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   display: grid;
+  background: url("/images/cover-image-dark.png") no-repeat fixed center center;
+  background-size: cover;
   grid-template-columns: 10px 355px 10px;
   row-gap: 50px;
   grid-template-areas:
@@ -11,13 +13,8 @@
     ". footer ."
 }
 
-*:focus {
-  outline: none;
-}
-
 .header {
   grid-area: header;
-  background: url("/images/cover-image-dark.png") lightgray 50% / cover no-repeat;
   display: grid;
   grid-template-rows: 10px 26px 40px 98px 65px 192px 55px 117px 66px;
   grid-template-columns: 10px 355px 10px;
