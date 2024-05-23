@@ -8,7 +8,7 @@
   grid-template-columns: 10px 355px 10px;
   row-gap: 50px;
   grid-template-areas:
-    "header header header"
+    ". header ."
     ". main ."
     ". footer ."
 }
@@ -17,7 +17,6 @@
   grid-area: header;
   display: grid;
   grid-template-rows: 10px 26px 40px 98px 65px 192px 55px 117px 66px;
-  grid-template-columns: 10px 355px 10px;
   grid-template-areas:
     ". . ."
     ". rec ."
@@ -249,17 +248,17 @@
   "."
 }
 
-/*@media (min-width: 1024px) {*/
-/*  .first-section {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(6, 1fr);*/
-/*    grid-template-rows: repeat(5, 1fr);*/
-/*    grid-template-areas:*/
-/*    "content       content       image         title        title    title"*/
-/*    "image       image       image         price        rating   rating"*/
-/*    "content    content    features      price        payment  payment"*/
-/*    "description description description   description  reviews  reviews  "*/
-/*    "shipping    contact     availability  availability warranty sizes"*/
-/*    "material    material    related       related      related  related";*/
-/*  }*/
-/*}*/
+@media (min-width: 1024px) {
+  .first-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "content       content       image         title        title    title"
+    "image       image       image         price        rating   rating"
+    "content    content    features      price        payment  payment"
+    "description description description   description  reviews  reviews  "
+    "shipping    contact     availability  availability warranty sizes"
+    "material    material    related       related      related  related";
+  }
+}
