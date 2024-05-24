@@ -44,7 +44,6 @@
   height: 25px;
   box-shadow: 1px -1px 0 var(--accent-color);
   justify-self: end;
-  align-self: start;
 }
 
 .red-border-footer {
@@ -52,7 +51,6 @@
   width: 25px;
   height: 25px;
   box-shadow: -1px 1px 0 var(--accent-color);
-  align-self: end;
 }
 
 .header__theme-menu-button {
@@ -118,12 +116,45 @@
     "article3"
 }
 
+.first-section.section-rows {
+  grid-template-areas:
+    "section-title"
+    "article1"
+    "article2"
+}
+
+.third-section.section-rows {
+  grid-template-areas:
+    "section-title"
+    "article1"
+}
+
 .article-rows {
   display: grid;
   row-gap: 10px;
   grid-template-areas:
     "article-title"
     "article-text"
+}
+
+.article-rows {
+  grid-area: article-rows;
+  display: grid;
+  row-gap: 10px;
+  grid-template-areas:
+    "article-title"
+    "article-text"
+}
+
+.third-section > .article-rows {
+  row-gap: 20px;
+  grid-template-areas:
+  "article-title"
+  "article-rows"
+  "article-rows"
+  "article-rows"
+  "article-rows"
+  "article-rows"
 }
 
 .image-rows {
@@ -171,10 +202,6 @@
 
 .article-text {
   grid-area: article-text;
-}
-
-.margin-bot-plus-ten {
-  margin-bottom: 10px;
 }
 
 .plain-text-style {
@@ -237,13 +264,14 @@
 
 .title-style {
   grid-area: title;
-  font-family: IBM Plex Mono, serif;
+  font-family: 'IBM Plex Mono', serif;
   font-size: 116px;
   font-weight: 700;
   line-height: 95.7px;
-  text-align: left;
   color: var(--title-style-color);
   text-shadow: 4px 4px 0 var(--accent-color);
+  display: flex;
+  align-items: center;
 }
 
 .red-border-upper {
@@ -264,8 +292,8 @@
   "."
   "title"
   "."
-  "red-border-down";
-"."
+  "red-border-down"
+  "."
 }
 
 @media (min-width: 768px) {
@@ -304,12 +332,23 @@
     ".             article3"
   }
 
+  .first-section.section-rows {
+    grid-template-areas:
+    "section-title article1"
+    ".             article2"
+  }
+
   .second-section.section-rows {
     grid-template-areas:
     "section-title ."
     "article1 article1"
     "article2 article2"
     "article3 article3"
+  }
+
+  .third-section.section-rows {
+    grid-template-areas:
+    "section-title article1"
   }
 
   .image-title {
@@ -339,7 +378,7 @@
   .image-rows {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 23px 192px 230px 318px;
+    grid-template-rows: 23px 260px 315px 433px;
     grid-template-areas:
     "image-title image-title image-title"
     "first-image first-image second-image"
@@ -367,7 +406,6 @@
 
   .header {
     grid-template-rows: 20px 26px 273px 130px 114px 71px 89px 25px 20px;
-    /*grid-template-columns: 25px 352px 230px 132px;*/
     grid-template-areas:
     "."
     "rec"
@@ -407,5 +445,9 @@
   .article-rows {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer {
+    grid-template-rows: 20px 25px 274px 130px 274px 25px 20px;
   }
 }
