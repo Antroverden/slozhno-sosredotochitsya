@@ -369,7 +369,7 @@
   .image-rows {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 23px 260px 315px 433px;
+    grid-template-rows: 23px 192px 230px 479px;
     grid-template-areas:
     "image-title image-title image-title"
     "first-image first-image second-image"
@@ -436,6 +436,10 @@
   .article-rows {
     display: flex;
     flex-direction: column;
+  }
+
+  .image-rows {
+    grid-template-rows: 23px 260px 315px 433px;
   }
 
   .footer {
