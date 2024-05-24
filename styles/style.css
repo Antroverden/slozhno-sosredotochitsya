@@ -130,14 +130,6 @@
 }
 
 .article-rows {
-  display: grid;
-  row-gap: 10px;
-  grid-template-areas:
-    "article-title"
-    "article-text"
-}
-
-.article-rows {
   grid-area: article-rows;
   display: grid;
   row-gap: 10px;
@@ -146,15 +138,14 @@
     "article-text"
 }
 
-.third-section > .article-rows {
+.main-article-title {
+  grid-area: main-article-title;
+}
+
+.main-article-rows {
+  display: flex;
+  flex-direction: column;
   row-gap: 20px;
-  grid-template-areas:
-  "article-title"
-  "article-rows"
-  "article-rows"
-  "article-rows"
-  "article-rows"
-  "article-rows"
 }
 
 .image-rows {
