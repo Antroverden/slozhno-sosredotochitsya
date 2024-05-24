@@ -9,4 +9,10 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #FF0070;
+  --plain-text-color: #F1B2CE;
+  --title-style-color: #DB00FF;
+  --menu-button-hover-color: rgba(255, 0, 112, 0.40);
+  background: url("/images/cover-image-dark.png") no-repeat fixed center center;
+  background-size: cover;
 }

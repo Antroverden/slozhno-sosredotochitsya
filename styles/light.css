@@ -10,9 +10,19 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   /* Файл light.css */
-  :root {
-    --accent-color: #ff8dcb;
-  }
+  --accent-color: #ff8dcb;
+  --plain-text-color: #353430;
+  --title-style-color: #FFC2E6;
+  --menu-button-hover-color: rgba(50, 49, 45, 0.40);
+  background: url("/images/cover-image-light.png") no-repeat fixed center center;
+  background-size: cover;
 }
 
-
+:root {
+  @media (prefers-color-scheme: light) {
+    --accent-color: #ff8dcb;
+    --plain-text-color: #353430;
+    --title-style-color: #FFC2E6;
+    --menu-button-hover-color: rgba(50, 49, 45, 0.40);
+  }
+}
