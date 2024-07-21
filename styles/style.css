@@ -5,12 +5,13 @@
   display: grid;
   background: url("/images/cover-image-dark.png") no-repeat fixed center center;
   background-size: cover;
-  grid-template-columns: 10px 355px 10px;
+  grid-template-columns: calc(100vw - 20px);
   row-gap: 40px;
   grid-template-areas:
-    ". header ."
-    ". main ."
-    ". footer .";
+    "header"
+    "main"
+    "footer";
+  padding-left: 10px;
   @media (prefers-color-scheme: light) {
     background: url("/images/cover-image-light.png") no-repeat fixed center center;
     background-size: cover;
@@ -26,9 +27,9 @@
     "rec"
     "."
     "toggle-menu"
-     "."
+    "."
     "title"
-     "."
+    "."
     "article-title"
     "."
 }
@@ -36,6 +37,7 @@
 .position-for-rec {
   grid-area: rec;
   justify-self: end;
+  margin-right: 10px;
   display: flex;
 }
 
@@ -43,7 +45,6 @@
   width: 25px;
   height: 25px;
   box-shadow: 1px -1px 0 var(--accent-color);
-  justify-self: end;
 }
 
 .red-border-footer {
@@ -256,7 +257,7 @@
 .title-style {
   grid-area: title;
   font-family: 'IBM Plex Mono', serif;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 95.7px;
   color: var(--title-style-color);
@@ -287,14 +288,20 @@
   "."
 }
 
+.footer .title-style {
+  justify-self: center;
+}
+
 @media (min-width: 768px) {
   .page {
-    grid-template-columns: 20px 728px 20px;
+    grid-template-columns: calc(100vw - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
     row-gap: 60px;
   }
 
   .title-style {
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header {
@@ -315,7 +322,7 @@
   }
 
   .section-rows {
-    grid-template-columns: 236px 472px;
+    grid-template-columns: 1fr 2fr;
     column-gap: 20px;
     grid-template-areas:
     "section-title article1"
@@ -387,10 +394,6 @@
 }
 
 @media (min-width: 1024px) {
-  .page {
-    grid-template-columns: 20px 984px 20px;
-  }
-
   .title-style {
     font-size: 157px;
   }
@@ -420,10 +423,6 @@
 
   .fixed-width-article {
     width: 491px;
-  }
-
-  .section-rows {
-    grid-template-columns: 315px 649px;
   }
 
   .second-section.section-rows {
