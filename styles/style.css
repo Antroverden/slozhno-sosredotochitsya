@@ -12,6 +12,7 @@
     "main"
     "footer";
   padding-left: 10px;
+  padding-right: 10px;
   @media (prefers-color-scheme: light) {
     background: url("/images/cover-image-light.png") no-repeat fixed center center;
     background-size: cover;
@@ -245,7 +246,7 @@
   background: var(--accent-color);
 }
 
-.red-text {
+.article-title-text {
   grid-area: section-title;
   color: var(--accent-color);
 }
